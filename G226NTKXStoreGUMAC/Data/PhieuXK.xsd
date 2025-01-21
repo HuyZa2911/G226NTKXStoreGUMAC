@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PhieuXK" targetNamespace="http://tempuri.org/PhieuXK.xsd" xmlns:mstns="http://tempuri.org/PhieuXK.xsd" xmlns="http://tempuri.org/PhieuXK.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="StoreGUMACConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="StoreGUMACConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.G226NTKXStoreGUMAC.Properties.Settings.GlobalReference.Default.StoreGUMACConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PhieuXKTableAdapter" GeneratorDataComponentClassName="PhieuXKTableAdapter" Name="PhieuXK" UserDataComponentName="PhieuXKTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StoreGUMACConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT xk.ID, xk.ngaylap, xk.mscsbh, xk.msnv, xk.mskho, xk.msncc, xk.ghichu, ctxk.sl,
+	qa.tensp, qa.giavon,csbh.tencsdh, nv.hoten
+FROM dbo.[PhieuXK] as xk
+left join [CTPhieuXK] as ctxk on ctxk.msphieuxk = xk.ID
+right join [DMQuanAo] as qa on qa.ID = ctxk.msquanao
+right join DMCSBH as csbh on csbh.ID = xk. mscsbh
+right join DMNV as nv on nv.ID = xk.msnv</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="ngaylap" DataSetColumn="ngaylap" />
+              <Mapping SourceColumn="mscsbh" DataSetColumn="mscsbh" />
+              <Mapping SourceColumn="msnv" DataSetColumn="msnv" />
+              <Mapping SourceColumn="ghichu" DataSetColumn="ghichu" />
+              <Mapping SourceColumn="mskho" DataSetColumn="mskho" />
+              <Mapping SourceColumn="msncc" DataSetColumn="msncc" />
+              <Mapping SourceColumn="sl" DataSetColumn="sl" />
+              <Mapping SourceColumn="tensp" DataSetColumn="tensp" />
+              <Mapping SourceColumn="giavon" DataSetColumn="giavon" />
+              <Mapping SourceColumn="tencsdh" DataSetColumn="tencsdh" />
+              <Mapping SourceColumn="hoten" DataSetColumn="hoten" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PhieuXK" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PhieuXK" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="PhieuXK">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PhieuXK" msprop:Generator_RowEvHandlerName="PhieuXKRowChangeEventHandler" msprop:Generator_RowDeletedName="PhieuXKRowDeleted" msprop:Generator_RowDeletingName="PhieuXKRowDeleting" msprop:Generator_RowEvArgName="PhieuXKRowChangeEvent" msprop:Generator_TablePropName="_PhieuXK" msprop:Generator_RowChangedName="PhieuXKRowChanged" msprop:Generator_UserTableName="PhieuXK" msprop:Generator_RowChangingName="PhieuXKRowChanging" msprop:Generator_RowClassName="PhieuXKRow" msprop:Generator_TableClassName="PhieuXKDataTable" msprop:Generator_TableVarName="tablePhieuXK">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" minOccurs="0" />
+              <xs:element name="ngaylap" msprop:Generator_ColumnPropNameInTable="ngaylapColumn" msprop:Generator_ColumnPropNameInRow="ngaylap" msprop:Generator_UserColumnName="ngaylap" msprop:Generator_ColumnVarNameInTable="columnngaylap" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="mscsbh" msprop:Generator_ColumnPropNameInTable="mscsbhColumn" msprop:Generator_ColumnPropNameInRow="mscsbh" msprop:Generator_UserColumnName="mscsbh" msprop:Generator_ColumnVarNameInTable="columnmscsbh" type="xs:int" minOccurs="0" />
+              <xs:element name="msnv" msprop:Generator_ColumnPropNameInTable="msnvColumn" msprop:Generator_ColumnPropNameInRow="msnv" msprop:Generator_UserColumnName="msnv" msprop:Generator_ColumnVarNameInTable="columnmsnv" type="xs:int" minOccurs="0" />
+              <xs:element name="ghichu" msprop:Generator_ColumnPropNameInTable="ghichuColumn" msprop:Generator_ColumnPropNameInRow="ghichu" msprop:Generator_UserColumnName="ghichu" msprop:Generator_ColumnVarNameInTable="columnghichu" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mskho" msprop:Generator_UserColumnName="mskho" msprop:Generator_ColumnPropNameInTable="mskhoColumn" msprop:Generator_ColumnPropNameInRow="mskho" msprop:Generator_ColumnVarNameInTable="columnmskho" type="xs:int" minOccurs="0" />
+              <xs:element name="msncc" msprop:Generator_UserColumnName="msncc" msprop:Generator_ColumnPropNameInTable="msnccColumn" msprop:Generator_ColumnPropNameInRow="msncc" msprop:Generator_ColumnVarNameInTable="columnmsncc" type="xs:int" minOccurs="0" />
+              <xs:element name="sl" msprop:Generator_UserColumnName="sl" msprop:Generator_ColumnPropNameInTable="slColumn" msprop:Generator_ColumnPropNameInRow="sl" msprop:Generator_ColumnVarNameInTable="columnsl" type="xs:double" minOccurs="0" />
+              <xs:element name="tensp" msprop:Generator_UserColumnName="tensp" msprop:Generator_ColumnPropNameInTable="tenspColumn" msprop:Generator_ColumnPropNameInRow="tensp" msprop:Generator_ColumnVarNameInTable="columntensp" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="giavon" msprop:Generator_UserColumnName="giavon" msprop:Generator_ColumnPropNameInTable="giavonColumn" msprop:Generator_ColumnPropNameInRow="giavon" msprop:Generator_ColumnVarNameInTable="columngiavon" type="xs:double" minOccurs="0" />
+              <xs:element name="tencsdh" msprop:Generator_UserColumnName="tencsdh" msprop:Generator_ColumnPropNameInTable="tencsdhColumn" msprop:Generator_ColumnPropNameInRow="tencsdh" msprop:Generator_ColumnVarNameInTable="columntencsdh" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hoten" msprop:Generator_UserColumnName="hoten" msprop:Generator_ColumnPropNameInTable="hotenColumn" msprop:Generator_ColumnPropNameInRow="hoten" msprop:Generator_ColumnVarNameInTable="columnhoten">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PhieuXK" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

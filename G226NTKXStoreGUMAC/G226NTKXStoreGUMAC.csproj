@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4173F2BB-E91D-4247-8505-7130DFFE4080}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>G226NTKXStoreGUMAC</RootNamespace>
+    <AssemblyName>G226NTKXStoreGUMAC</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Assets\gumac_logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DMCSBH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DMCSBH.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DMKho.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DMKho.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DMNSX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DMNSX.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DMNV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DMNV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DMQA.cs">
+      <DependentUpon>DMQA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DMQA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DMQA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NhapKho.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NhapKho.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NhomSP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NhomSP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhieuNK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhieuNK.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhieuXK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhieuXK.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frCashFlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frCashFlow.Designer.cs">
+      <DependentUpon>frCashFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frNhapKho.Designer.cs">
+      <DependentUpon>frNhapKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frQLDMQA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frQLDMQA.Designer.cs">
+      <DependentUpon>frQLDMQA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frLogin.Designer.cs">
+      <DependentUpon>frLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frMain26.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frMain26.Designer.cs">
+      <DependentUpon>frMain26.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frXuatKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frXuatKho.Designer.cs">
+      <DependentUpon>frXuatKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frCashFlow.resx">
+      <DependentUpon>frCashFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frNhapKho.resx">
+      <DependentUpon>frNhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frQLDMQA.resx">
+      <DependentUpon>frQLDMQA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frLogin.resx">
+      <DependentUpon>frLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frMain26.resx">
+      <DependentUpon>frMain26.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frXuatKho.resx">
+      <DependentUpon>frXuatKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Data\DMCSBH.xsc">
+      <DependentUpon>DMCSBH.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DMCSBH.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DMCSBH.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\DMCSBH.xss">
+      <DependentUpon>DMCSBH.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DMKho.xsc">
+      <DependentUpon>DMKho.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DMKho.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DMKho.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\DMKho.xss">
+      <DependentUpon>DMKho.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DMNSX.xsc">
+      <DependentUpon>DMNSX.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DMNSX.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DMNSX.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\DMNSX.xss">
+      <DependentUpon>DMNSX.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DMNV.xsc">
+      <DependentUpon>DMNV.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DMNV.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DMNV.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\DMNV.xss">
+      <DependentUpon>DMNV.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DMQA.xsc">
+      <DependentUpon>DMQA.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DMQA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DMQA.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\DMQA.xss">
+      <DependentUpon>DMQA.xsd</DependentUpon>
+    </None>
+    <None Include="Data\NhapKho.xsc">
+      <DependentUpon>NhapKho.xsd</DependentUpon>
+    </None>
+    <None Include="Data\NhapKho.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NhapKho.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\NhapKho.xss">
+      <DependentUpon>NhapKho.xsd</DependentUpon>
+    </None>
+    <None Include="Data\NhomSP.xsc">
+      <DependentUpon>NhomSP.xsd</DependentUpon>
+    </None>
+    <None Include="Data\NhomSP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NhomSP.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\NhomSP.xss">
+      <DependentUpon>NhomSP.xsd</DependentUpon>
+    </None>
+    <None Include="Data\PhieuNK.xsc">
+      <DependentUpon>PhieuNK.xsd</DependentUpon>
+    </None>
+    <None Include="Data\PhieuNK.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhieuNK.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\PhieuNK.xss">
+      <DependentUpon>PhieuNK.xsd</DependentUpon>
+    </None>
+    <None Include="Data\PhieuXK.xsc">
+      <DependentUpon>PhieuXK.xsd</DependentUpon>
+    </None>
+    <None Include="Data\PhieuXK.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhieuXK.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\PhieuXK.xss">
+      <DependentUpon>PhieuXK.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\gumac_logo.ico" />
+    <Content Include="gumac-logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Media\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
