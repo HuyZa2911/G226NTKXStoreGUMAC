@@ -1,14 +1,8 @@
-﻿using G226NTKXStoreGUMAC.Data;
+﻿using G226NTKXStoreGUMAC.Common;
+using G226NTKXStoreGUMAC.Data;
 using G226NTKXStoreGUMAC.Data.DMNVTableAdapters;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace G226NTKXStoreGUMAC
@@ -39,12 +33,14 @@ namespace G226NTKXStoreGUMAC
                 MessageBox.Show("Tài khoản và mật khẩu không được bỏ trống");
                 return;
             }
-            var data = dMNVTableAdapter.Fill(dmnv._DMNV, account, pass);
-            if (data == 0)
+            DMNV.DMNVDataTable data = dMNVTableAdapter.GetData(account, pass);
+           
+            if (data.Count == 0)
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không hợp lệ");
                 return;
             }
+            Common.Common.User = data.First();
 
             frMain26 m = new frMain26();
             m.Show();

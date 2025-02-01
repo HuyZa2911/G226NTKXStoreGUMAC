@@ -19,7 +19,6 @@ namespace G226NTKXStoreGUMAC
             this.dMKhoTableAdapter.Fill(this.dMKho._DMKho);
             this.dMCSBHTableAdapter.Fill(this.dMCSBH._DMCSBH);
             this.nhomSPTableAdapter.Fill(this.nhomSP._NhomSP);
-
         }
 
         private void btnXK_Click(object sender, EventArgs e)

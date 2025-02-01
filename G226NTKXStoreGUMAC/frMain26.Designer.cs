@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frMain26));
-            this.lbday = new System.Windows.Forms.Label();
             this.danhMụcNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tRÌNHBÀYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kẾTOÁNCHITIẾTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,11 +40,6 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.danhMụcNhàCungCấpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -59,7 +53,6 @@
             this.quảnLýDanhMụcQAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.thoátChươngTrìnhToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblClock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.danhMụcKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -93,28 +86,24 @@
             this.danhMụcQuầnÁoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhMụcCơSởBánhHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhMụcNhàSảnXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblClock = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbday = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbday
-            // 
-            this.lbday.AutoSize = true;
-            this.lbday.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lbday.Location = new System.Drawing.Point(957, 103);
-            this.lbday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbday.Name = "lbday";
-            this.lbday.Size = new System.Drawing.Size(48, 23);
-            this.lbday.TabIndex = 20;
-            this.lbday.Text = "day";
-            // 
             // danhMụcNhânViênToolStripMenuItem
             // 
             this.danhMụcNhânViênToolStripMenuItem.Name = "danhMụcNhânViênToolStripMenuItem";
-            this.danhMụcNhânViênToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.danhMụcNhânViênToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.danhMụcNhânViênToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.danhMụcNhânViênToolStripMenuItem.Text = "Danh mục nhân viên";
             // 
             // tRÌNHBÀYToolStripMenuItem
@@ -187,71 +176,11 @@
             this.toolStripButton4.Size = new System.Drawing.Size(134, 24);
             this.toolStripButton4.Text = "Thoát chương trình";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(18, 205);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(338, 18);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Khoa: Khoa học dữ liệu, UFM, Năm 2024";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(21, 138);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(357, 18);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Mượn tên thương hiệu, chỉ phục vụ học tập ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(18, 174);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(425, 18);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Sinh viên: Nguyễn Thị Kim Xuân [26] 2221004362";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(18, 107);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(899, 18);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Lập trình kế toán căn bản phân hệ kế toán xuất nhập kho thương mại (Store) của hệ" +
-    " thống cửa hàng GUMAC ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(17, 67);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(742, 23);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "ĐỒ ÁN HỌC PHẦN: LẬP TRÌNH KẾ TOÁN CĂN BẢN (243110117000.)";
-            // 
             // danhMụcNhàCungCấpToolStripMenuItem
             // 
             this.danhMụcNhàCungCấpToolStripMenuItem.Name = "danhMụcNhàCungCấpToolStripMenuItem";
-            this.danhMụcNhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.danhMụcNhàCungCấpToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.danhMụcNhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.danhMụcNhàCungCấpToolStripMenuItem.Text = "Danh mục nhà cung cấp";
             // 
             // statusStrip1
@@ -348,18 +277,6 @@
             this.thoátChươngTrìnhToolStripMenuItem1.Size = new System.Drawing.Size(253, 26);
             this.thoátChươngTrìnhToolStripMenuItem1.Text = "Thoát chương trình";
             // 
-            // lblClock
-            // 
-            this.lblClock.AutoSize = true;
-            this.lblClock.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lblClock.Location = new System.Drawing.Point(957, 67);
-            this.lblClock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblClock.Name = "lblClock";
-            this.lblClock.Size = new System.Drawing.Size(107, 23);
-            this.lblClock.TabIndex = 19;
-            this.lblClock.Text = "Đồng hồ ";
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -367,7 +284,8 @@
             // danhMụcKhoToolStripMenuItem
             // 
             this.danhMụcKhoToolStripMenuItem.Name = "danhMụcKhoToolStripMenuItem";
-            this.danhMụcKhoToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.danhMụcKhoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.danhMụcKhoToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.danhMụcKhoToolStripMenuItem.Text = "Danh mục kho";
             // 
             // menuStrip1
@@ -596,14 +514,102 @@
             // danhMụcCơSởBánhHàngToolStripMenuItem
             // 
             this.danhMụcCơSởBánhHàngToolStripMenuItem.Name = "danhMụcCơSởBánhHàngToolStripMenuItem";
-            this.danhMụcCơSởBánhHàngToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.danhMụcCơSởBánhHàngToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
+            this.danhMụcCơSởBánhHàngToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.danhMụcCơSởBánhHàngToolStripMenuItem.Text = "Danh mục cơ sở bán hàng";
+            this.danhMụcCơSởBánhHàngToolStripMenuItem.Click += new System.EventHandler(this.danhMụcCơSởBánhHàngToolStripMenuItem_Click);
             // 
             // danhMụcNhàSảnXuấtToolStripMenuItem
             // 
             this.danhMụcNhàSảnXuấtToolStripMenuItem.Name = "danhMụcNhàSảnXuấtToolStripMenuItem";
-            this.danhMụcNhàSảnXuấtToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.danhMụcNhàSảnXuấtToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.danhMụcNhàSảnXuấtToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.danhMụcNhàSảnXuấtToolStripMenuItem.Text = "Danh mục nhà sản xuất";
+            // 
+            // lblClock
+            // 
+            this.lblClock.AutoSize = true;
+            this.lblClock.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lblClock.Location = new System.Drawing.Point(957, 67);
+            this.lblClock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblClock.Name = "lblClock";
+            this.lblClock.Size = new System.Drawing.Size(107, 23);
+            this.lblClock.TabIndex = 19;
+            this.lblClock.Text = "Đồng hồ ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(17, 67);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(742, 23);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "ĐỒ ÁN HỌC PHẦN: LẬP TRÌNH KẾ TOÁN CĂN BẢN (243110117000.)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(18, 107);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(899, 18);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Lập trình kế toán căn bản phân hệ kế toán xuất nhập kho thương mại (Store) của hệ" +
+    " thống cửa hàng GUMAC ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Blue;
+            this.label4.Location = new System.Drawing.Point(18, 174);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(425, 18);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Sinh viên: Nguyễn Thị Kim Xuân [26] 2221004362";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(21, 138);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(357, 18);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Mượn tên thương hiệu, chỉ phục vụ học tập ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(18, 205);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(338, 18);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Khoa: Khoa học dữ liệu, UFM, Năm 2024";
+            // 
+            // lbday
+            // 
+            this.lbday.AutoSize = true;
+            this.lbday.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lbday.Location = new System.Drawing.Point(957, 103);
+            this.lbday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbday.Name = "lbday";
+            this.lbday.Size = new System.Drawing.Size(48, 23);
+            this.lbday.TabIndex = 20;
+            this.lbday.Text = "day";
             // 
             // frMain26
             // 
@@ -636,8 +642,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbday;
         private System.Windows.Forms.ToolStripMenuItem danhMụcNhânViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tRÌNHBÀYToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kẾTOÁNCHITIẾTToolStripMenuItem;
@@ -648,11 +652,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem danhMụcNhàCungCấpToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
@@ -666,7 +665,6 @@
         private System.Windows.Forms.ToolStripMenuItem quảnLýDanhMụcQAToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
         private System.Windows.Forms.ToolStripMenuItem thoátChươngTrìnhToolStripMenuItem1;
-        private System.Windows.Forms.Label lblClock;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem danhMụcKhoToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -700,5 +698,12 @@
         private System.Windows.Forms.ToolStripMenuItem danhMụcQuầnÁoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem danhMụcCơSởBánhHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem danhMụcNhàSảnXuấtToolStripMenuItem;
+        private System.Windows.Forms.Label lblClock;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbday;
     }
 }

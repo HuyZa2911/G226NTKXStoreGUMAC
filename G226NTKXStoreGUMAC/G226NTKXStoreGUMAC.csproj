@@ -64,6 +64,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Common.cs" />
+    <Compile Include="Common\Methods.cs" />
     <Compile Include="Data\DMCSBH.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -118,6 +120,12 @@
     <Compile Include="frCashFlow.Designer.cs">
       <DependentUpon>frCashFlow.cs</DependentUpon>
     </Compile>
+    <Compile Include="frCSBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frCSBH.Designer.cs">
+      <DependentUpon>frCSBH.cs</DependentUpon>
+    </Compile>
     <Compile Include="frNhapKho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +160,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frCashFlow.resx">
       <DependentUpon>frCashFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frCSBH.resx">
+      <DependentUpon>frCSBH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frNhapKho.resx">
       <DependentUpon>frNhapKho.cs</DependentUpon>
