@@ -39,9 +39,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewQA = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenspDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.msnhomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mansxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenspDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giavonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chatlieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kichthuocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,18 +67,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.dataGridViewSP = new System.Windows.Forms.DataGridView();
-            this.phieuNKBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.phieuNKBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.phieuNK = new G226NTKXStoreGUMAC.Data.PhieuNK();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.dMCSBHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dMCSBH = new G226NTKXStoreGUMAC.Data.DMCSBH();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbbCSBH = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -86,8 +83,11 @@
             this.dMKhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dMKho = new G226NTKXStoreGUMAC.Data.DMKho();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbMK = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.phieuNKBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.phieuNKBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.phieuNK = new G226NTKXStoreGUMAC.Data.PhieuNK();
             this.button2 = new System.Windows.Forms.Button();
             this.btnluu = new System.Windows.Forms.Button();
             this.txttongcong = new System.Windows.Forms.TextBox();
@@ -98,6 +98,17 @@
             this.dMKhoTableAdapter = new G226NTKXStoreGUMAC.Data.DMKhoTableAdapters.DMKhoTableAdapter();
             this.dMCSBHTableAdapter = new G226NTKXStoreGUMAC.Data.DMCSBHTableAdapters.DMCSBHTableAdapter();
             this.phieuNKTableAdapter = new G226NTKXStoreGUMAC.Data.PhieuNKTableAdapters.PhieuNKTableAdapter();
+            this.rMaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rTenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rMaKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rTenKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rMaCSBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rTenCSBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rNgayXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMQuanAoBindingSource)).BeginInit();
@@ -106,13 +117,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.nhomSP1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phieuNKBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phieuNKBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phieuNK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMCSBHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMCSBH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMKhoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMKho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phieuNKBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phieuNKBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phieuNK)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicketNgSX
@@ -159,6 +170,7 @@
             this.btnNK.TabIndex = 9;
             this.btnNK.Text = "Nhập kho sản phẩm";
             this.btnNK.UseVisualStyleBackColor = true;
+            this.btnNK.Click += new System.EventHandler(this.btnNK_Click);
             // 
             // groupBox1
             // 
@@ -187,9 +199,9 @@
             this.dataGridViewQA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewQA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
+            this.tenspDataGridViewTextBoxColumn,
             this.msnhomDataGridViewTextBoxColumn,
             this.mansxDataGridViewTextBoxColumn,
-            this.tenspDataGridViewTextBoxColumn,
             this.giavonDataGridViewTextBoxColumn,
             this.chatlieuDataGridViewTextBoxColumn,
             this.kichthuocDataGridViewTextBoxColumn,
@@ -206,6 +218,7 @@
             this.dataGridViewQA.Name = "dataGridViewQA";
             this.dataGridViewQA.Size = new System.Drawing.Size(441, 181);
             this.dataGridViewQA.TabIndex = 8;
+            this.dataGridViewQA.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -214,88 +227,88 @@
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // tenspDataGridViewTextBoxColumn
+            // 
+            this.tenspDataGridViewTextBoxColumn.DataPropertyName = "tensp";
+            this.tenspDataGridViewTextBoxColumn.HeaderText = "Tên SP";
+            this.tenspDataGridViewTextBoxColumn.Name = "tenspDataGridViewTextBoxColumn";
+            // 
             // msnhomDataGridViewTextBoxColumn
             // 
             this.msnhomDataGridViewTextBoxColumn.DataPropertyName = "msnhom";
-            this.msnhomDataGridViewTextBoxColumn.HeaderText = "msnhom";
+            this.msnhomDataGridViewTextBoxColumn.HeaderText = "Mã nhóm";
             this.msnhomDataGridViewTextBoxColumn.Name = "msnhomDataGridViewTextBoxColumn";
             // 
             // mansxDataGridViewTextBoxColumn
             // 
             this.mansxDataGridViewTextBoxColumn.DataPropertyName = "mansx";
-            this.mansxDataGridViewTextBoxColumn.HeaderText = "mansx";
+            this.mansxDataGridViewTextBoxColumn.HeaderText = "Mã SX";
             this.mansxDataGridViewTextBoxColumn.Name = "mansxDataGridViewTextBoxColumn";
-            // 
-            // tenspDataGridViewTextBoxColumn
-            // 
-            this.tenspDataGridViewTextBoxColumn.DataPropertyName = "tensp";
-            this.tenspDataGridViewTextBoxColumn.HeaderText = "tensp";
-            this.tenspDataGridViewTextBoxColumn.Name = "tenspDataGridViewTextBoxColumn";
             // 
             // giavonDataGridViewTextBoxColumn
             // 
             this.giavonDataGridViewTextBoxColumn.DataPropertyName = "giavon";
-            this.giavonDataGridViewTextBoxColumn.HeaderText = "giavon";
+            this.giavonDataGridViewTextBoxColumn.HeaderText = "Giá vốn";
             this.giavonDataGridViewTextBoxColumn.Name = "giavonDataGridViewTextBoxColumn";
             // 
             // chatlieuDataGridViewTextBoxColumn
             // 
             this.chatlieuDataGridViewTextBoxColumn.DataPropertyName = "chatlieu";
-            this.chatlieuDataGridViewTextBoxColumn.HeaderText = "chatlieu";
+            this.chatlieuDataGridViewTextBoxColumn.HeaderText = "Chất liệu";
             this.chatlieuDataGridViewTextBoxColumn.Name = "chatlieuDataGridViewTextBoxColumn";
             // 
             // kichthuocDataGridViewTextBoxColumn
             // 
             this.kichthuocDataGridViewTextBoxColumn.DataPropertyName = "kichthuoc";
-            this.kichthuocDataGridViewTextBoxColumn.HeaderText = "kichthuoc";
+            this.kichthuocDataGridViewTextBoxColumn.HeaderText = "Kích thước";
             this.kichthuocDataGridViewTextBoxColumn.Name = "kichthuocDataGridViewTextBoxColumn";
             // 
             // mausacDataGridViewTextBoxColumn
             // 
             this.mausacDataGridViewTextBoxColumn.DataPropertyName = "mausac";
-            this.mausacDataGridViewTextBoxColumn.HeaderText = "mausac";
+            this.mausacDataGridViewTextBoxColumn.HeaderText = "Màu sắc";
             this.mausacDataGridViewTextBoxColumn.Name = "mausacDataGridViewTextBoxColumn";
             // 
             // phongcachDataGridViewTextBoxColumn
             // 
             this.phongcachDataGridViewTextBoxColumn.DataPropertyName = "phongcach";
-            this.phongcachDataGridViewTextBoxColumn.HeaderText = "phongcach";
+            this.phongcachDataGridViewTextBoxColumn.HeaderText = "Phong cách";
             this.phongcachDataGridViewTextBoxColumn.Name = "phongcachDataGridViewTextBoxColumn";
             // 
             // motaDataGridViewTextBoxColumn
             // 
             this.motaDataGridViewTextBoxColumn.DataPropertyName = "mota";
-            this.motaDataGridViewTextBoxColumn.HeaderText = "mota";
+            this.motaDataGridViewTextBoxColumn.HeaderText = "Mô tả";
             this.motaDataGridViewTextBoxColumn.Name = "motaDataGridViewTextBoxColumn";
             // 
             // ngaysxDataGridViewTextBoxColumn
             // 
             this.ngaysxDataGridViewTextBoxColumn.DataPropertyName = "ngaysx";
-            this.ngaysxDataGridViewTextBoxColumn.HeaderText = "ngaysx";
+            this.ngaysxDataGridViewTextBoxColumn.HeaderText = "Ngày SX";
             this.ngaysxDataGridViewTextBoxColumn.Name = "ngaysxDataGridViewTextBoxColumn";
             // 
             // hinhDataGridViewTextBoxColumn
             // 
             this.hinhDataGridViewTextBoxColumn.DataPropertyName = "hinh";
-            this.hinhDataGridViewTextBoxColumn.HeaderText = "hinh";
+            this.hinhDataGridViewTextBoxColumn.HeaderText = "Hình";
             this.hinhDataGridViewTextBoxColumn.Name = "hinhDataGridViewTextBoxColumn";
             // 
             // conspDataGridViewCheckBoxColumn
             // 
             this.conspDataGridViewCheckBoxColumn.DataPropertyName = "consp";
-            this.conspDataGridViewCheckBoxColumn.HeaderText = "consp";
+            this.conspDataGridViewCheckBoxColumn.HeaderText = "Còn SP";
             this.conspDataGridViewCheckBoxColumn.Name = "conspDataGridViewCheckBoxColumn";
             // 
             // tennhomDataGridViewTextBoxColumn
             // 
             this.tennhomDataGridViewTextBoxColumn.DataPropertyName = "tennhom";
-            this.tennhomDataGridViewTextBoxColumn.HeaderText = "tennhom";
+            this.tennhomDataGridViewTextBoxColumn.HeaderText = "Tên nhóm";
             this.tennhomDataGridViewTextBoxColumn.Name = "tennhomDataGridViewTextBoxColumn";
             // 
             // tennsxDataGridViewTextBoxColumn
             // 
             this.tennsxDataGridViewTextBoxColumn.DataPropertyName = "tennsx";
-            this.tennsxDataGridViewTextBoxColumn.HeaderText = "tennsx";
+            this.tennsxDataGridViewTextBoxColumn.HeaderText = "Tên SX";
             this.tennsxDataGridViewTextBoxColumn.Name = "tennsxDataGridViewTextBoxColumn";
             // 
             // dMQuanAoBindingSource
@@ -409,8 +422,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.txtTenNV);
+            this.groupBox2.Controls.Add(this.txtMaNV);
             this.groupBox2.Controls.Add(this.dataGridViewSP);
             this.groupBox2.Controls.Add(this.dateTimePicketNgSX);
             this.groupBox2.Controls.Add(this.textBox3);
@@ -418,13 +431,13 @@
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.comboBox4);
-            this.groupBox2.Controls.Add(this.comboBox3);
+            this.groupBox2.Controls.Add(this.cbbCSBH);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cbbMK);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(550, 72);
@@ -434,42 +447,40 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lập phiếu nhập kho";
             // 
-            // textBox1
+            // txtTenNV
             // 
-            this.textBox1.Location = new System.Drawing.Point(347, 158);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 10;
+            this.txtTenNV.Location = new System.Drawing.Point(347, 158);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(100, 23);
+            this.txtTenNV.TabIndex = 10;
             // 
-            // textBox4
+            // txtMaNV
             // 
-            this.textBox4.Location = new System.Drawing.Point(347, 124);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 23);
-            this.textBox4.TabIndex = 11;
+            this.txtMaNV.Location = new System.Drawing.Point(347, 124);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(100, 23);
+            this.txtMaNV.TabIndex = 11;
             // 
             // dataGridViewSP
             // 
+            this.dataGridViewSP.AllowUserToAddRows = false;
             this.dataGridViewSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.rMaSP,
+            this.rTenSP,
+            this.rSL,
+            this.rGia,
+            this.rTien,
+            this.rMaKho,
+            this.rTenKho,
+            this.rMaCSBH,
+            this.rTenCSBH,
+            this.rNgayXuat,
+            this.rGhiChu});
             this.dataGridViewSP.Location = new System.Drawing.Point(35, 275);
             this.dataGridViewSP.Name = "dataGridViewSP";
             this.dataGridViewSP.Size = new System.Drawing.Size(412, 167);
             this.dataGridViewSP.TabIndex = 27;
-            // 
-            // phieuNKBindingSource1
-            // 
-            this.phieuNKBindingSource1.DataMember = "PhieuNK";
-            this.phieuNKBindingSource1.DataSource = this.phieuNKBindingSource;
-            // 
-            // phieuNKBindingSource
-            // 
-            this.phieuNKBindingSource.DataSource = this.phieuNK;
-            this.phieuNKBindingSource.Position = 0;
-            // 
-            // phieuNK
-            // 
-            this.phieuNK.DataSetName = "PhieuNK";
-            this.phieuNK.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label14
             // 
@@ -513,17 +524,17 @@
             this.dMCSBH.DataSetName = "DMCSBH";
             this.dMCSBH.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // comboBox3
+            // cbbCSBH
             // 
-            this.comboBox3.DataSource = this.dMCSBHBindingSource;
-            this.comboBox3.DisplayMember = "ID";
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(119, 121);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(134, 24);
-            this.comboBox3.TabIndex = 18;
-            this.comboBox3.ValueMember = "ID";
+            this.cbbCSBH.DataSource = this.dMCSBHBindingSource;
+            this.cbbCSBH.DisplayMember = "ID";
+            this.cbbCSBH.FormattingEnabled = true;
+            this.cbbCSBH.Location = new System.Drawing.Point(119, 121);
+            this.cbbCSBH.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbCSBH.Name = "cbbCSBH";
+            this.cbbCSBH.Size = new System.Drawing.Size(134, 24);
+            this.cbbCSBH.TabIndex = 18;
+            this.cbbCSBH.ValueMember = "ID";
             // 
             // label13
             // 
@@ -587,17 +598,17 @@
             this.label10.TabIndex = 13;
             this.label10.Text = "Tên Kho";
             // 
-            // comboBox1
+            // cbbMK
             // 
-            this.comboBox1.DataSource = this.dMKhoBindingSource;
-            this.comboBox1.DisplayMember = "ID";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(119, 37);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(328, 24);
-            this.comboBox1.TabIndex = 10;
-            this.comboBox1.ValueMember = "ID";
+            this.cbbMK.DataSource = this.dMKhoBindingSource;
+            this.cbbMK.DisplayMember = "ID";
+            this.cbbMK.FormattingEnabled = true;
+            this.cbbMK.Location = new System.Drawing.Point(119, 37);
+            this.cbbMK.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbMK.Name = "cbbMK";
+            this.cbbMK.Size = new System.Drawing.Size(328, 24);
+            this.cbbMK.TabIndex = 10;
+            this.cbbMK.ValueMember = "ID";
             // 
             // label9
             // 
@@ -608,6 +619,21 @@
             this.label9.Size = new System.Drawing.Size(55, 16);
             this.label9.TabIndex = 12;
             this.label9.Text = "Mã Kho";
+            // 
+            // phieuNKBindingSource1
+            // 
+            this.phieuNKBindingSource1.DataMember = "PhieuNK";
+            this.phieuNKBindingSource1.DataSource = this.phieuNKBindingSource;
+            // 
+            // phieuNKBindingSource
+            // 
+            this.phieuNKBindingSource.DataSource = this.phieuNK;
+            this.phieuNKBindingSource.Position = 0;
+            // 
+            // phieuNK
+            // 
+            this.phieuNK.DataSetName = "PhieuNK";
+            this.phieuNK.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button2
             // 
@@ -642,6 +668,7 @@
             this.btnxoa.TabIndex = 21;
             this.btnxoa.Text = "Xoa";
             this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // label17
             // 
@@ -672,6 +699,62 @@
             // 
             this.phieuNKTableAdapter.ClearBeforeFill = true;
             // 
+            // rMaSP
+            // 
+            this.rMaSP.HeaderText = "Mã SP";
+            this.rMaSP.Name = "rMaSP";
+            // 
+            // rTenSP
+            // 
+            this.rTenSP.HeaderText = "Tên SP";
+            this.rTenSP.Name = "rTenSP";
+            // 
+            // rSL
+            // 
+            this.rSL.HeaderText = "Số lượng";
+            this.rSL.Name = "rSL";
+            // 
+            // rGia
+            // 
+            this.rGia.HeaderText = "Giá";
+            this.rGia.Name = "rGia";
+            // 
+            // rTien
+            // 
+            this.rTien.DataPropertyName = "rGia * rSL";
+            this.rTien.HeaderText = "Tổng tiền";
+            this.rTien.Name = "rTien";
+            // 
+            // rMaKho
+            // 
+            this.rMaKho.HeaderText = "Mã kho";
+            this.rMaKho.Name = "rMaKho";
+            // 
+            // rTenKho
+            // 
+            this.rTenKho.HeaderText = "Tên kho";
+            this.rTenKho.Name = "rTenKho";
+            // 
+            // rMaCSBH
+            // 
+            this.rMaCSBH.HeaderText = "Mã CSBH";
+            this.rMaCSBH.Name = "rMaCSBH";
+            // 
+            // rTenCSBH
+            // 
+            this.rTenCSBH.HeaderText = "Tên CSBH";
+            this.rTenCSBH.Name = "rTenCSBH";
+            // 
+            // rNgayXuat
+            // 
+            this.rNgayXuat.HeaderText = "Ngày xuất";
+            this.rNgayXuat.Name = "rNgayXuat";
+            // 
+            // rGhiChu
+            // 
+            this.rGhiChu.HeaderText = "Ghi chú";
+            this.rGhiChu.Name = "rGhiChu";
+            // 
             // frNhapKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -701,13 +784,13 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phieuNKBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phieuNKBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phieuNK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMCSBHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMCSBH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMKhoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMKho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phieuNKBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phieuNKBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phieuNK)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -731,19 +814,19 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTenNV;
+        private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.DataGridView dataGridViewSP;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbbCSBH;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbMK;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnluu;
@@ -753,21 +836,6 @@
         private Data.NhomSP nhomSP;
         private Data.NhomSPTableAdapters.NhomSPTableAdapter nhomSPTableAdapter;
         private System.Windows.Forms.DataGridView dataGridViewQA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn msnhomDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mansxDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenspDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giavonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chatlieuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kichthuocDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mausacDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phongcachDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn motaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaysxDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hinhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn conspDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tennhomDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tennsxDataGridViewTextBoxColumn;
         private Data.NhomSP nhomSP1;
         private System.Windows.Forms.BindingSource nhomSPBindingSource;
         private Data.NhomSPTableAdapters.NhomSPTableAdapter nhomSPTableAdapter1;
@@ -784,5 +852,31 @@
         private Data.PhieuNK phieuNK;
         private System.Windows.Forms.BindingSource phieuNKBindingSource1;
         private Data.PhieuNKTableAdapters.PhieuNKTableAdapter phieuNKTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenspDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn msnhomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mansxDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giavonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chatlieuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kichthuocDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mausacDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phongcachDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn motaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaysxDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn conspDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tennhomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tennsxDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rMaSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rTenSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rSL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rMaKho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rTenKho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rMaCSBH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rTenCSBH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rNgayXuat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rGhiChu;
     }
 }
