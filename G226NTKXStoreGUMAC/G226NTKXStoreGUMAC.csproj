@@ -66,6 +66,16 @@
   <ItemGroup>
     <Compile Include="Common\Common.cs" />
     <Compile Include="Common\Methods.cs" />
+    <Compile Include="Data\CTPhieuNK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTPhieuNK.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CTPhieuXK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTPhieuXK.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Data\DMCSBH.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -93,11 +103,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DMQA.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Data\NhapKho.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NhapKho.xsd</DependentUpon>
     </Compile>
     <Compile Include="Data\NhomSP.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -188,6 +193,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Data\CTPhieuNK.xsc">
+      <DependentUpon>CTPhieuNK.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CTPhieuNK.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTPhieuNK.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\CTPhieuNK.xss">
+      <DependentUpon>CTPhieuNK.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CTPhieuXK.xsc">
+      <DependentUpon>CTPhieuXK.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CTPhieuXK.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTPhieuXK.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\CTPhieuXK.xss">
+      <DependentUpon>CTPhieuXK.xsd</DependentUpon>
+    </None>
     <None Include="Data\DMCSBH.xsc">
       <DependentUpon>DMCSBH.xsd</DependentUpon>
     </None>
@@ -242,17 +269,6 @@
     </None>
     <None Include="Data\DMQA.xss">
       <DependentUpon>DMQA.xsd</DependentUpon>
-    </None>
-    <None Include="Data\NhapKho.xsc">
-      <DependentUpon>NhapKho.xsd</DependentUpon>
-    </None>
-    <None Include="Data\NhapKho.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>NhapKho.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Data\NhapKho.xss">
-      <DependentUpon>NhapKho.xsd</DependentUpon>
     </None>
     <None Include="Data\NhomSP.xsc">
       <DependentUpon>NhomSP.xsd</DependentUpon>

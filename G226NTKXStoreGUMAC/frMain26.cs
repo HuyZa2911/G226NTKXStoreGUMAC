@@ -69,7 +69,8 @@ namespace G226NTKXStoreGUMAC
 
         private void danhMụcCơSởBánhHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frCSBH fr = new frCSBH();
+            fr.Show();
         }
     }
 }

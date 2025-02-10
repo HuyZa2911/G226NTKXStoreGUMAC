@@ -1,4 +1,5 @@
-﻿using System;
+﻿using G226NTKXStoreGUMAC.Data.CTPhieuNKTableAdapters;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -7,13 +8,27 @@ namespace G226NTKXStoreGUMAC
     public partial class frNhapKho : Form
     {
 
-        static int vt = 0;
-        static int pos = 0;
+        CTPhieuNKTableAdapter cTPhieuNKTableAdapter = new CTPhieuNKTableAdapter();
+
+        int vt = 0;
+        int pos = 0;
         public frNhapKho()
         {
             InitializeComponent();
         }
 
+        private double convertDouble(object value)
+        {
+            double data = value != DBNull.Value ? Convert.ToDouble(value) : 0;
+            return data;
+        }
+
+        private int convertInt(object value)
+        {
+            Console.WriteLine("abc---"+value.ToString());
+            int data = value != DBNull.Value ? int.Parse(value.ToString()) : 0;
+            return data;
+        }
         private void frNhapKho_Load(object sender, EventArgs e)
         {
             this.phieuNKTableAdapter.Fill(this.phieuNK._PhieuNK);
@@ -94,8 +109,7 @@ e)
             {
                 double price = enteredQuantity * convertDouble(itemPrice);
                 dataGridViewSP.Rows.Add(
-                  itemCode, itemName, txtsoluong.Text, itemPrice, price, cbbMK.SelectedValue, cbbMK.SelectedItem, cbbCSBH.SelectedValue,
-                  cbbCSBH.SelectedItem, dateTimePicketNgSX.Text
+                  itemCode, itemName, txtsoluong.Text, itemPrice, price
                 );
             }
             setTotalPrice();
@@ -140,11 +154,7 @@ e)
             return true;
         }
 
-        private double convertDouble(object value)
-        {
-            double data = value != DBNull.Value ? Convert.ToDouble(value) : 0;
-            return data;
-        }
+       
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
@@ -155,6 +165,29 @@ e)
             {
                 dataGridViewSP.Rows.RemoveAt(pos);
             }
+            setTotalPrice();
+        }
+
+        private void btnluu_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewSP.Rows.Count <= 0)
+            {
+                MessageBox.Show("Vui lòng thêm sản phẩm");
+                return;
+            }
+            int data = this.phieuNKTableAdapter.InsertQuery(
+                dateTimePicketNgSX.Text,convertInt(cbbCSBH.SelectedValue.ToString()),
+                    Common.Common.User.ID, convertInt(cbbMK.SelectedValue.ToString()),null,txtGhiChu.Text
+                );
+            for (int i = 0; i < dataGridViewSP.Rows.Count; i++)
+            {
+                cTPhieuNKTableAdapter.InsertQuery(
+                    convertInt(dataGridViewSP.Rows[i].Cells["rMaSP"].Value.ToString()),
+                    convertDouble(dataGridViewSP.Rows[i].Cells["rSL"].Value.ToString()),
+                    data);
+            }
+            MessageBox.Show("Lưu thành công");
+            dataGridViewSP.Rows.Clear();
         }
     }
 

@@ -32,7 +32,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frNhapKho));
             this.dateTimePicketNgSX = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnNK = new System.Windows.Forms.Button();
@@ -70,6 +70,11 @@
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.dataGridViewSP = new System.Windows.Forms.DataGridView();
+            this.rMaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rTenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
@@ -98,17 +103,6 @@
             this.dMKhoTableAdapter = new G226NTKXStoreGUMAC.Data.DMKhoTableAdapters.DMKhoTableAdapter();
             this.dMCSBHTableAdapter = new G226NTKXStoreGUMAC.Data.DMCSBHTableAdapters.DMCSBHTableAdapter();
             this.phieuNKTableAdapter = new G226NTKXStoreGUMAC.Data.PhieuNKTableAdapters.PhieuNKTableAdapter();
-            this.rMaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rTenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rMaKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rTenKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rMaCSBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rTenCSBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rNgayXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMQuanAoBindingSource)).BeginInit();
@@ -135,13 +129,13 @@
             this.dateTimePicketNgSX.Size = new System.Drawing.Size(134, 19);
             this.dateTimePicketNgSX.TabIndex = 26;
             // 
-            // textBox3
+            // txtGhiChu
             // 
-            this.textBox3.Location = new System.Drawing.Point(119, 226);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(328, 43);
-            this.textBox3.TabIndex = 25;
+            this.txtGhiChu.Location = new System.Drawing.Point(119, 226);
+            this.txtGhiChu.Multiline = true;
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(328, 43);
+            this.txtGhiChu.TabIndex = 25;
             // 
             // label15
             // 
@@ -194,6 +188,7 @@
             // 
             // dataGridViewQA
             // 
+            this.dataGridViewQA.AllowUserToAddRows = false;
             this.dataGridViewQA.AllowUserToOrderColumns = true;
             this.dataGridViewQA.AutoGenerateColumns = false;
             this.dataGridViewQA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -426,7 +421,7 @@
             this.groupBox2.Controls.Add(this.txtMaNV);
             this.groupBox2.Controls.Add(this.dataGridViewSP);
             this.groupBox2.Controls.Add(this.dateTimePicketNgSX);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.txtGhiChu);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label16);
@@ -470,17 +465,37 @@
             this.rTenSP,
             this.rSL,
             this.rGia,
-            this.rTien,
-            this.rMaKho,
-            this.rTenKho,
-            this.rMaCSBH,
-            this.rTenCSBH,
-            this.rNgayXuat,
-            this.rGhiChu});
+            this.rTien});
             this.dataGridViewSP.Location = new System.Drawing.Point(35, 275);
             this.dataGridViewSP.Name = "dataGridViewSP";
             this.dataGridViewSP.Size = new System.Drawing.Size(412, 167);
             this.dataGridViewSP.TabIndex = 27;
+            // 
+            // rMaSP
+            // 
+            this.rMaSP.HeaderText = "Mã SP";
+            this.rMaSP.Name = "rMaSP";
+            // 
+            // rTenSP
+            // 
+            this.rTenSP.HeaderText = "Tên SP";
+            this.rTenSP.Name = "rTenSP";
+            // 
+            // rSL
+            // 
+            this.rSL.HeaderText = "Số lượng";
+            this.rSL.Name = "rSL";
+            // 
+            // rGia
+            // 
+            this.rGia.HeaderText = "Giá";
+            this.rGia.Name = "rGia";
+            // 
+            // rTien
+            // 
+            this.rTien.DataPropertyName = "rGia * rSL";
+            this.rTien.HeaderText = "Tổng tiền";
+            this.rTien.Name = "rTien";
             // 
             // label14
             // 
@@ -652,6 +667,7 @@
             this.btnluu.TabIndex = 22;
             this.btnluu.Text = "Lưu";
             this.btnluu.UseVisualStyleBackColor = true;
+            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
             // 
             // txttongcong
             // 
@@ -699,62 +715,6 @@
             // 
             this.phieuNKTableAdapter.ClearBeforeFill = true;
             // 
-            // rMaSP
-            // 
-            this.rMaSP.HeaderText = "Mã SP";
-            this.rMaSP.Name = "rMaSP";
-            // 
-            // rTenSP
-            // 
-            this.rTenSP.HeaderText = "Tên SP";
-            this.rTenSP.Name = "rTenSP";
-            // 
-            // rSL
-            // 
-            this.rSL.HeaderText = "Số lượng";
-            this.rSL.Name = "rSL";
-            // 
-            // rGia
-            // 
-            this.rGia.HeaderText = "Giá";
-            this.rGia.Name = "rGia";
-            // 
-            // rTien
-            // 
-            this.rTien.DataPropertyName = "rGia * rSL";
-            this.rTien.HeaderText = "Tổng tiền";
-            this.rTien.Name = "rTien";
-            // 
-            // rMaKho
-            // 
-            this.rMaKho.HeaderText = "Mã kho";
-            this.rMaKho.Name = "rMaKho";
-            // 
-            // rTenKho
-            // 
-            this.rTenKho.HeaderText = "Tên kho";
-            this.rTenKho.Name = "rTenKho";
-            // 
-            // rMaCSBH
-            // 
-            this.rMaCSBH.HeaderText = "Mã CSBH";
-            this.rMaCSBH.Name = "rMaCSBH";
-            // 
-            // rTenCSBH
-            // 
-            this.rTenCSBH.HeaderText = "Tên CSBH";
-            this.rTenCSBH.Name = "rTenCSBH";
-            // 
-            // rNgayXuat
-            // 
-            this.rNgayXuat.HeaderText = "Ngày xuất";
-            this.rNgayXuat.Name = "rNgayXuat";
-            // 
-            // rGhiChu
-            // 
-            this.rGhiChu.HeaderText = "Ghi chú";
-            this.rGhiChu.Name = "rGhiChu";
-            // 
             // frNhapKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -799,7 +759,7 @@
         #endregion
 
         private System.Windows.Forms.DateTimePicker dateTimePicketNgSX;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnNK;
@@ -872,11 +832,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rSL;
         private System.Windows.Forms.DataGridViewTextBoxColumn rGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn rTien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rMaKho;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rTenKho;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rMaCSBH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rTenCSBH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rNgayXuat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rGhiChu;
     }
 }
