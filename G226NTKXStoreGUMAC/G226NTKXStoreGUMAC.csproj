@@ -86,6 +86,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DMKho.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Data\DMNCC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DMNCC.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Data\DMNSX.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -131,11 +136,35 @@
     <Compile Include="frCSBH.Designer.cs">
       <DependentUpon>frCSBH.cs</DependentUpon>
     </Compile>
+    <Compile Include="frDMKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frDMKho.Designer.cs">
+      <DependentUpon>frDMKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frDMNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frDMNCC.Designer.cs">
+      <DependentUpon>frDMNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frNhanVien.Designer.cs">
+      <DependentUpon>frNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="frNhapKho.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frNhapKho.Designer.cs">
       <DependentUpon>frNhapKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frNSX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frNSX.Designer.cs">
+      <DependentUpon>frNSX.cs</DependentUpon>
     </Compile>
     <Compile Include="frQLDMQA.cs">
       <SubType>Form</SubType>
@@ -169,8 +198,20 @@
     <EmbeddedResource Include="frCSBH.resx">
       <DependentUpon>frCSBH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frDMKho.resx">
+      <DependentUpon>frDMKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frDMNCC.resx">
+      <DependentUpon>frDMNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frNhanVien.resx">
+      <DependentUpon>frNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frNhapKho.resx">
       <DependentUpon>frNhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frNSX.resx">
+      <DependentUpon>frNSX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frQLDMQA.resx">
       <DependentUpon>frQLDMQA.cs</DependentUpon>
@@ -236,6 +277,17 @@
     </None>
     <None Include="Data\DMKho.xss">
       <DependentUpon>DMKho.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DMNCC.xsc">
+      <DependentUpon>DMNCC.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DMNCC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DMNCC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\DMNCC.xss">
+      <DependentUpon>DMNCC.xsd</DependentUpon>
     </None>
     <None Include="Data\DMNSX.xsc">
       <DependentUpon>DMNSX.xsd</DependentUpon>

@@ -27,11 +27,9 @@ namespace G226NTKXStoreGUMAC
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             vt = e.RowIndex;
-            Console.WriteLine(vt.ToString() + "-0-0-0-0-0-" + dataGridViewCSBH.Rows.Count.ToString());
             setvalue();
         }
         void setvalue() {
-            
             txtTen.Text = dataGridViewCSBH.Rows[vt].Cells["tencsbh"].Value.ToString();
             txtDiaChi.Text = dataGridViewCSBH.Rows[vt].Cells["dc"].Value.ToString();
             txtSDT.Text = dataGridViewCSBH.Rows[vt].Cells["sdt"].Value.ToString();
@@ -58,7 +56,10 @@ namespace G226NTKXStoreGUMAC
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            checkValueNull();
+            if (!checkValueNull())
+            {
+                return;
+            }
 
             DialogResult ch = MessageBox.Show("Bạn có muốn thêm CSBH " + txtTen.Text + " không (Y/N)?", "Xác nhận",
             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -106,7 +107,10 @@ namespace G226NTKXStoreGUMAC
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            checkValueNull();
+            if (!checkValueNull())
+            {
+                return;
+            }
 
             DialogResult ch = MessageBox.Show("Bạn có muốn cập nhật CSBH "+ dataGridViewCSBH.Rows[vt].Cells["tencsbh"].Value.ToString() + " thành " + txtTen.Text + " không (Y/N)?", "Xác nhận",
             MessageBoxButtons.YesNo, MessageBoxIcon.Question);

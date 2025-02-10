@@ -72,5 +72,29 @@ namespace G226NTKXStoreGUMAC
             frCSBH fr = new frCSBH();
             fr.Show();
         }
+
+        private void danhMụcKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frDMKho fr = new frDMKho();
+            fr.Show();
+        }
+
+        private void danhMụcNhàSảnXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frNSX fr = new frNSX();
+            fr.Show();
+        }
+
+        private void danhMụcNhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frDMNCC fr = new frDMNCC();
+            fr.Show();
+        }
+
+        private void danhMụcNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frNhanVien fr = new frNhanVien();
+            fr.Show();
+        }
     }
 }

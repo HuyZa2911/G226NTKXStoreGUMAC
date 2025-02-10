@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridViewCSBH = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tencsbh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dMCSBHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dMCSBH = new G226NTKXStoreGUMAC.Data.DMCSBH();
             this.dMCSBHTableAdapter = new G226NTKXStoreGUMAC.Data.DMCSBHTableAdapters.DMCSBHTableAdapter();
@@ -45,10 +49,6 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tencsbh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCSBH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMCSBHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMCSBH)).BeginInit();
@@ -69,6 +69,31 @@
             this.dataGridViewCSBH.Size = new System.Drawing.Size(340, 146);
             this.dataGridViewCSBH.TabIndex = 0;
             this.dataGridViewCSBH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // tencsbh
+            // 
+            this.tencsbh.DataPropertyName = "tencsdh";
+            this.tencsbh.HeaderText = "Tên CSBH";
+            this.tencsbh.Name = "tencsbh";
+            // 
+            // dc
+            // 
+            this.dc.DataPropertyName = "dc";
+            this.dc.HeaderText = "Địa chỉ";
+            this.dc.Name = "dc";
+            // 
+            // sdt
+            // 
+            this.sdt.DataPropertyName = "sodt";
+            this.sdt.HeaderText = "sdt";
+            this.sdt.Name = "sdt";
             // 
             // dMCSBHBindingSource
             // 
@@ -191,31 +216,6 @@
             this.button5.Text = "Thoát chương trình";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // tencsbh
-            // 
-            this.tencsbh.DataPropertyName = "tencsdh";
-            this.tencsbh.HeaderText = "Tên CSBH";
-            this.tencsbh.Name = "tencsbh";
-            // 
-            // dc
-            // 
-            this.dc.DataPropertyName = "dc";
-            this.dc.HeaderText = "Địa chỉ";
-            this.dc.Name = "dc";
-            // 
-            // sdt
-            // 
-            this.sdt.DataPropertyName = "sodt";
-            this.sdt.HeaderText = "sdt";
-            this.sdt.Name = "sdt";
-            // 
             // frCSBH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,6 +235,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewCSBH);
             this.Name = "frCSBH";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frCSBH";
             this.Load += new System.EventHandler(this.frCSBH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCSBH)).EndInit();
