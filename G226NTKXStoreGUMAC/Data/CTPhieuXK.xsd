@@ -90,16 +90,16 @@ VALUES        (@msquanao,@sl,@msphieuxk); </CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="CTPhieuXK" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="CTPhieuXK" msprop:Generator_DataSetName="CTPhieuXK">
+  <xs:element name="CTPhieuXK" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="CTPhieuXK" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CTPhieuXK">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CTPhieuXK" msprop:Generator_RowEvHandlerName="CTPhieuXKRowChangeEventHandler" msprop:Generator_RowDeletedName="CTPhieuXKRowDeleted" msprop:Generator_RowDeletingName="CTPhieuXKRowDeleting" msprop:Generator_RowEvArgName="CTPhieuXKRowChangeEvent" msprop:Generator_TablePropName="_CTPhieuXK" msprop:Generator_RowChangedName="CTPhieuXKRowChanged" msprop:Generator_RowChangingName="CTPhieuXKRowChanging" msprop:Generator_TableClassName="CTPhieuXKDataTable" msprop:Generator_RowClassName="CTPhieuXKRow" msprop:Generator_TableVarName="tableCTPhieuXK" msprop:Generator_UserTableName="CTPhieuXK">
+        <xs:element name="CTPhieuXK" msprop:Generator_RowClassName="CTPhieuXKRow" msprop:Generator_RowEvHandlerName="CTPhieuXKRowChangeEventHandler" msprop:Generator_RowDeletedName="CTPhieuXKRowDeleted" msprop:Generator_RowDeletingName="CTPhieuXKRowDeleting" msprop:Generator_RowEvArgName="CTPhieuXKRowChangeEvent" msprop:Generator_TablePropName="_CTPhieuXK" msprop:Generator_RowChangedName="CTPhieuXKRowChanged" msprop:Generator_UserTableName="CTPhieuXK" msprop:Generator_RowChangingName="CTPhieuXKRowChanging" msprop:Generator_TableClassName="CTPhieuXKDataTable" msprop:Generator_TableVarName="tableCTPhieuXK">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="msquanao" msprop:Generator_ColumnPropNameInRow="msquanao" msprop:Generator_ColumnPropNameInTable="msquanaoColumn" msprop:Generator_ColumnVarNameInTable="columnmsquanao" msprop:Generator_UserColumnName="msquanao" type="xs:int" minOccurs="0" />
-              <xs:element name="sl" msprop:Generator_ColumnPropNameInRow="sl" msprop:Generator_ColumnPropNameInTable="slColumn" msprop:Generator_ColumnVarNameInTable="columnsl" msprop:Generator_UserColumnName="sl" type="xs:double" minOccurs="0" />
-              <xs:element name="msphieuxk" msprop:Generator_ColumnPropNameInRow="msphieuxk" msprop:Generator_ColumnPropNameInTable="msphieuxkColumn" msprop:Generator_ColumnVarNameInTable="columnmsphieuxk" msprop:Generator_UserColumnName="msphieuxk" type="xs:int" minOccurs="0" />
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="msquanao" msprop:Generator_UserColumnName="msquanao" msprop:Generator_ColumnPropNameInTable="msquanaoColumn" msprop:Generator_ColumnPropNameInRow="msquanao" msprop:Generator_ColumnVarNameInTable="columnmsquanao" type="xs:int" minOccurs="0" />
+              <xs:element name="sl" msprop:Generator_UserColumnName="sl" msprop:Generator_ColumnPropNameInTable="slColumn" msprop:Generator_ColumnPropNameInRow="sl" msprop:Generator_ColumnVarNameInTable="columnsl" type="xs:double" minOccurs="0" />
+              <xs:element name="msphieuxk" msprop:Generator_UserColumnName="msphieuxk" msprop:Generator_ColumnPropNameInTable="msphieuxkColumn" msprop:Generator_ColumnPropNameInRow="msphieuxk" msprop:Generator_ColumnVarNameInTable="columnmsphieuxk" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

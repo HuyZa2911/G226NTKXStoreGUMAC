@@ -10,12 +10,12 @@ namespace G226NTKXStoreGUMAC
         {
             InitializeComponent();
         }
+
         private void frNhanVien_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dMNSX._DMNSX' table. You can move, or remove it, as needed.
             this.dMNVTableAdapter.FillBy(this.dMNV._DMNV);
         }
-
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -61,7 +61,6 @@ namespace G226NTKXStoreGUMAC
                 MessageBox.Show("Thêm không thành công! Vui lòng thử lại sau");
 
             }
-
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

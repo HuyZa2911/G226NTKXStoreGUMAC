@@ -9,14 +9,41 @@ namespace G226NTKXStoreGUMAC
         public frCashFlow()
         {
             InitializeComponent();
+            
         }
 
         private void frCashFlow_Load(object sender, EventArgs e)
         {
             this.dMKhoTableAdapter.Fill(this.dMKho._DMKho);
-            this.phieuXKTableAdapter.Fill(this.phieuXK._PhieuXK);
-            this.phieuNKTableAdapter.Fill(this.phieuNK._PhieuNK);
+            clearDateTimePicker();
+            fillter();
+        }
+
+        void clearDateTimePicker() {
+            dateTimeTuNgay.CustomFormat = " ";
+            dateTimeTuNgay.Format = DateTimePickerFormat.Custom;
+            dateTimeDenNgay.CustomFormat = " ";
+            dateTimeDenNgay.Format = DateTimePickerFormat.Custom;
             cbbKho.SelectedIndex = -1;
+        }
+
+        void fillter() {
+
+            DateTime? tuNgay = null, denNgay = null; int? maKho = null;
+            if (cbbKho.SelectedIndex > 0)
+            {
+                maKho = int.Parse(cbbKho.SelectedValue.ToString());
+            }
+            if (dateTimeTuNgay.Text !=" ")
+            {
+                tuNgay = DateTime.Parse(dateTimeTuNgay.Text);
+            }
+            if (dateTimeDenNgay.Text != " ")
+            {
+                denNgay = DateTime.Parse(dateTimeDenNgay.Text);
+            }
+            this.phieuXKTableAdapter.FillBy(this.phieuXK._PhieuXK, tuNgay, denNgay, maKho);
+            this.phieuNKTableAdapter.FillBy(this.phieuNK._PhieuNK, tuNgay, denNgay, maKho);
             setValuePrice();
         }
 
@@ -56,6 +83,27 @@ namespace G226NTKXStoreGUMAC
             // Gán kết quả vào các textbox với định dạng tiền tệ Việt Nam
             txtTongXuatKho.Text = tongNhapKho.ToString("C0", new CultureInfo("vi-VN"));
             txtTongNhapKho.Text = tongXuatKho.ToString("C0", new CultureInfo("vi-VN"));
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            fillter();
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            clearDateTimePicker();
+            fillter();
+        }
+
+        private void dateTimeTuNgay_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimeTuNgay.Format = DateTimePickerFormat.Long;
+        }
+
+        private void dateTimeDenNgay_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimeDenNgay.Format = DateTimePickerFormat.Long;
         }
     }
 }

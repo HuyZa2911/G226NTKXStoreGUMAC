@@ -67,11 +67,6 @@
             this.phieuNK = new G226NTKXStoreGUMAC.Data.PhieuNK();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.xuatKhoGridView = new System.Windows.Forms.DataGridView();
-            this.phieuXKBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.phieuXK = new G226NTKXStoreGUMAC.Data.PhieuXK();
-            this.phieuNKTableAdapter = new G226NTKXStoreGUMAC.Data.PhieuNKTableAdapters.PhieuNKTableAdapter();
-            this.phieuXKTableAdapter = new G226NTKXStoreGUMAC.Data.PhieuXKTableAdapters.PhieuXKTableAdapter();
-            this.dMKhoTableAdapter = new G226NTKXStoreGUMAC.Data.DMKhoTableAdapters.DMKhoTableAdapter();
             this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giavonXK = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,6 +77,11 @@
             this.msnvDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ghichuDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phieuXKBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.phieuXK = new G226NTKXStoreGUMAC.Data.PhieuXK();
+            this.phieuNKTableAdapter = new G226NTKXStoreGUMAC.Data.PhieuNKTableAdapters.PhieuNKTableAdapter();
+            this.phieuXKTableAdapter = new G226NTKXStoreGUMAC.Data.PhieuXKTableAdapters.PhieuXKTableAdapter();
+            this.dMKhoTableAdapter = new G226NTKXStoreGUMAC.Data.DMKhoTableAdapters.DMKhoTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dMKhoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMKho)).BeginInit();
@@ -199,6 +199,7 @@
             this.btnLamMoi.TabIndex = 31;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnTimKiem
             // 
@@ -208,6 +209,7 @@
             this.btnTimKiem.TabIndex = 30;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // cbbKho
             // 
@@ -238,6 +240,7 @@
             this.dateTimeDenNgay.Name = "dateTimeDenNgay";
             this.dateTimeDenNgay.Size = new System.Drawing.Size(134, 19);
             this.dateTimeDenNgay.TabIndex = 28;
+            this.dateTimeDenNgay.ValueChanged += new System.EventHandler(this.dateTimeDenNgay_ValueChanged);
             // 
             // dateTimeTuNgay
             // 
@@ -247,6 +250,7 @@
             this.dateTimeTuNgay.Name = "dateTimeTuNgay";
             this.dateTimeTuNgay.Size = new System.Drawing.Size(160, 19);
             this.dateTimeTuNgay.TabIndex = 27;
+            this.dateTimeTuNgay.ValueChanged += new System.EventHandler(this.dateTimeTuNgay_ValueChanged);
             // 
             // groupBox2
             // 
@@ -426,28 +430,6 @@
             this.xuatKhoGridView.Size = new System.Drawing.Size(465, 180);
             this.xuatKhoGridView.TabIndex = 1;
             // 
-            // phieuXKBindingSource
-            // 
-            this.phieuXKBindingSource.DataMember = "PhieuXK";
-            this.phieuXKBindingSource.DataSource = this.phieuXK;
-            // 
-            // phieuXK
-            // 
-            this.phieuXK.DataSetName = "PhieuXK";
-            this.phieuXK.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // phieuNKTableAdapter
-            // 
-            this.phieuNKTableAdapter.ClearBeforeFill = true;
-            // 
-            // phieuXKTableAdapter
-            // 
-            this.phieuXKTableAdapter.ClearBeforeFill = true;
-            // 
-            // dMKhoTableAdapter
-            // 
-            this.dMKhoTableAdapter.ClearBeforeFill = true;
-            // 
             // iDDataGridViewTextBoxColumn1
             // 
             this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
@@ -508,6 +490,28 @@
             this.ghichuDataGridViewTextBoxColumn1.DataPropertyName = "ghichu";
             this.ghichuDataGridViewTextBoxColumn1.HeaderText = "ghichu";
             this.ghichuDataGridViewTextBoxColumn1.Name = "ghichuDataGridViewTextBoxColumn1";
+            // 
+            // phieuXKBindingSource
+            // 
+            this.phieuXKBindingSource.DataMember = "PhieuXK";
+            this.phieuXKBindingSource.DataSource = this.phieuXK;
+            // 
+            // phieuXK
+            // 
+            this.phieuXK.DataSetName = "PhieuXK";
+            this.phieuXK.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // phieuNKTableAdapter
+            // 
+            this.phieuNKTableAdapter.ClearBeforeFill = true;
+            // 
+            // phieuXKTableAdapter
+            // 
+            this.phieuXKTableAdapter.ClearBeforeFill = true;
+            // 
+            // dMKhoTableAdapter
+            // 
+            this.dMKhoTableAdapter.ClearBeforeFill = true;
             // 
             // frCashFlow
             // 
