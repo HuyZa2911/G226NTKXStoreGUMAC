@@ -29,7 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frNSX));
             this.dataGridViewNSX = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tennsx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quocgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dMNSXBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dMNSX = new G226NTKXStoreGUMAC.Data.DMNSX();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,12 +48,6 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tennsx = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quocgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dMNSXBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dMNSX = new G226NTKXStoreGUMAC.Data.DMNSX();
             this.dMNSXTableAdapter = new G226NTKXStoreGUMAC.Data.DMNSXTableAdapters.DMNSXTableAdapter();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNSX)).BeginInit();
@@ -69,6 +70,41 @@
             this.dataGridViewNSX.Size = new System.Drawing.Size(443, 150);
             this.dataGridViewNSX.TabIndex = 0;
             this.dataGridViewNSX.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // tennsx
+            // 
+            this.tennsx.DataPropertyName = "tennsx";
+            this.tennsx.HeaderText = "tennsx";
+            this.tennsx.Name = "tennsx";
+            // 
+            // quocgia
+            // 
+            this.quocgia.DataPropertyName = "quocgia";
+            this.quocgia.HeaderText = "quocgia";
+            this.quocgia.Name = "quocgia";
+            // 
+            // mota
+            // 
+            this.mota.DataPropertyName = "mota";
+            this.mota.HeaderText = "mota";
+            this.mota.Name = "mota";
+            // 
+            // dMNSXBindingSource
+            // 
+            this.dMNSXBindingSource.DataMember = "DMNSX";
+            this.dMNSXBindingSource.DataSource = this.dMNSX;
+            // 
+            // dMNSX
+            // 
+            this.dMNSX.DataSetName = "DMNSX";
+            this.dMNSX.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -166,41 +202,6 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // tennsx
-            // 
-            this.tennsx.DataPropertyName = "tennsx";
-            this.tennsx.HeaderText = "tennsx";
-            this.tennsx.Name = "tennsx";
-            // 
-            // quocgia
-            // 
-            this.quocgia.DataPropertyName = "quocgia";
-            this.quocgia.HeaderText = "quocgia";
-            this.quocgia.Name = "quocgia";
-            // 
-            // mota
-            // 
-            this.mota.DataPropertyName = "mota";
-            this.mota.HeaderText = "mota";
-            this.mota.Name = "mota";
-            // 
-            // dMNSXBindingSource
-            // 
-            this.dMNSXBindingSource.DataMember = "DMNSX";
-            this.dMNSXBindingSource.DataSource = this.dMNSX;
-            // 
-            // dMNSX
-            // 
-            this.dMNSX.DataSetName = "DMNSX";
-            this.dMNSX.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dMNSXTableAdapter
             // 
             this.dMNSXTableAdapter.ClearBeforeFill = true;
@@ -234,7 +235,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.dataGridViewNSX);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frNSX";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frNSX";
             this.Load += new System.EventHandler(this.frNSX_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNSX)).EndInit();

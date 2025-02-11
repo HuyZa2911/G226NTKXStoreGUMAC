@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frCSBH));
             this.dataGridViewCSBH = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tencsbh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -234,6 +235,7 @@
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewCSBH);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frCSBH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frCSBH";

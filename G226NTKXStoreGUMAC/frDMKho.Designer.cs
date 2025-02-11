@@ -29,7 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frDMKho));
             this.dataGridViewKho = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenkho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.succhua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.controng = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dMKhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dMKho = new G226NTKXStoreGUMAC.Data.DMKho();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,14 +55,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtConTrong = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenkho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.succhua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.controng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dMKhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dMKho = new G226NTKXStoreGUMAC.Data.DMKho();
             this.dMKhoTableAdapter = new G226NTKXStoreGUMAC.Data.DMKhoTableAdapters.DMKhoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMKhoBindingSource)).BeginInit();
@@ -77,6 +78,53 @@
             this.dataGridViewKho.Size = new System.Drawing.Size(355, 196);
             this.dataGridViewKho.TabIndex = 0;
             this.dataGridViewKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // tenkho
+            // 
+            this.tenkho.DataPropertyName = "tenkho";
+            this.tenkho.HeaderText = "tenkho";
+            this.tenkho.Name = "tenkho";
+            // 
+            // dc
+            // 
+            this.dc.DataPropertyName = "dc";
+            this.dc.HeaderText = "dc";
+            this.dc.Name = "dc";
+            // 
+            // sdt
+            // 
+            this.sdt.DataPropertyName = "sodt";
+            this.sdt.HeaderText = "sodt";
+            this.sdt.Name = "sdt";
+            // 
+            // succhua
+            // 
+            this.succhua.DataPropertyName = "succhua";
+            this.succhua.HeaderText = "succhua";
+            this.succhua.Name = "succhua";
+            // 
+            // controng
+            // 
+            this.controng.DataPropertyName = "controng";
+            this.controng.HeaderText = "controng";
+            this.controng.Name = "controng";
+            // 
+            // dMKhoBindingSource
+            // 
+            this.dMKhoBindingSource.DataMember = "DMKho";
+            this.dMKhoBindingSource.DataSource = this.dMKho;
+            // 
+            // dMKho
+            // 
+            this.dMKho.DataSetName = "DMKho";
+            this.dMKho.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -217,53 +265,6 @@
             this.label6.TabIndex = 38;
             this.label6.Text = "Danh sách danh mục kho";
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // tenkho
-            // 
-            this.tenkho.DataPropertyName = "tenkho";
-            this.tenkho.HeaderText = "tenkho";
-            this.tenkho.Name = "tenkho";
-            // 
-            // dc
-            // 
-            this.dc.DataPropertyName = "dc";
-            this.dc.HeaderText = "dc";
-            this.dc.Name = "dc";
-            // 
-            // sdt
-            // 
-            this.sdt.DataPropertyName = "sodt";
-            this.sdt.HeaderText = "sodt";
-            this.sdt.Name = "sdt";
-            // 
-            // succhua
-            // 
-            this.succhua.DataPropertyName = "succhua";
-            this.succhua.HeaderText = "succhua";
-            this.succhua.Name = "succhua";
-            // 
-            // controng
-            // 
-            this.controng.DataPropertyName = "controng";
-            this.controng.HeaderText = "controng";
-            this.controng.Name = "controng";
-            // 
-            // dMKhoBindingSource
-            // 
-            this.dMKhoBindingSource.DataMember = "DMKho";
-            this.dMKhoBindingSource.DataSource = this.dMKho;
-            // 
-            // dMKho
-            // 
-            this.dMKho.DataSetName = "DMKho";
-            this.dMKho.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dMKhoTableAdapter
             // 
             this.dMKhoTableAdapter.ClearBeforeFill = true;
@@ -290,7 +291,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.dataGridViewKho);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frDMKho";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frDMKho";
             this.Load += new System.EventHandler(this.frDMKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKho)).EndInit();

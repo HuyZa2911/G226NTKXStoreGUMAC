@@ -29,7 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frDMNCC));
             this.dataGridViewNCC = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenncc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dMNCCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dMNCC = new G226NTKXStoreGUMAC.Data.DMNCC();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -41,14 +48,8 @@
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
-            this.dMNCCBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dMNCC = new G226NTKXStoreGUMAC.Data.DMNCC();
             this.dMNCCTableAdapter = new G226NTKXStoreGUMAC.Data.DMNCCTableAdapters.DMNCCTableAdapter();
             this.label6 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenncc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNCC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMNCCBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMNCC)).BeginInit();
@@ -69,6 +70,41 @@
             this.dataGridViewNCC.Size = new System.Drawing.Size(447, 171);
             this.dataGridViewNCC.TabIndex = 0;
             this.dataGridViewNCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // tenncc
+            // 
+            this.tenncc.DataPropertyName = "tenncc";
+            this.tenncc.HeaderText = "tenncc";
+            this.tenncc.Name = "tenncc";
+            // 
+            // dc
+            // 
+            this.dc.DataPropertyName = "dc";
+            this.dc.HeaderText = "dc";
+            this.dc.Name = "dc";
+            // 
+            // sdt
+            // 
+            this.sdt.DataPropertyName = "sodt";
+            this.sdt.HeaderText = "sodt";
+            this.sdt.Name = "sdt";
+            // 
+            // dMNCCBindingSource
+            // 
+            this.dMNCCBindingSource.DataMember = "DMNCC";
+            this.dMNCCBindingSource.DataSource = this.dMNCC;
+            // 
+            // dMNCC
+            // 
+            this.dMNCC.DataSetName = "DMNCC";
+            this.dMNCC.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button5
             // 
@@ -166,16 +202,6 @@
             this.txtSDT.Size = new System.Drawing.Size(239, 20);
             this.txtSDT.TabIndex = 45;
             // 
-            // dMNCCBindingSource
-            // 
-            this.dMNCCBindingSource.DataMember = "DMNCC";
-            this.dMNCCBindingSource.DataSource = this.dMNCC;
-            // 
-            // dMNCC
-            // 
-            this.dMNCC.DataSetName = "DMNCC";
-            this.dMNCC.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dMNCCTableAdapter
             // 
             this.dMNCCTableAdapter.ClearBeforeFill = true;
@@ -190,31 +216,6 @@
             this.label6.Size = new System.Drawing.Size(387, 23);
             this.label6.TabIndex = 47;
             this.label6.Text = "Danh sách danh mục nhà cung cấp";
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // tenncc
-            // 
-            this.tenncc.DataPropertyName = "tenncc";
-            this.tenncc.HeaderText = "tenncc";
-            this.tenncc.Name = "tenncc";
-            // 
-            // dc
-            // 
-            this.dc.DataPropertyName = "dc";
-            this.dc.HeaderText = "dc";
-            this.dc.Name = "dc";
-            // 
-            // sdt
-            // 
-            this.sdt.DataPropertyName = "sodt";
-            this.sdt.HeaderText = "sodt";
-            this.sdt.Name = "sdt";
             // 
             // frDMNCC
             // 
@@ -234,6 +235,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.dataGridViewNCC);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frDMNCC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frDMNCC";

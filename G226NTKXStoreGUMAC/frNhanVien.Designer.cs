@@ -29,7 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frNhanVien));
             this.dataGridViewVN = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taikhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matkhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dMNVBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dMNV = new G226NTKXStoreGUMAC.Data.DMNV();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -43,14 +51,7 @@
             this.txtSdt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTen = new System.Windows.Forms.TextBox();
-            this.dMNVBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dMNV = new G226NTKXStoreGUMAC.Data.DMNV();
             this.dMNVTableAdapter = new G226NTKXStoreGUMAC.Data.DMNVTableAdapters.DMNVTableAdapter();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.taikhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matkhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMNVBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMNV)).BeginInit();
@@ -72,6 +73,47 @@
             this.dataGridViewVN.Size = new System.Drawing.Size(545, 150);
             this.dataGridViewVN.TabIndex = 0;
             this.dataGridViewVN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // hoTen
+            // 
+            this.hoTen.DataPropertyName = "hoten";
+            this.hoTen.HeaderText = "hoten";
+            this.hoTen.Name = "hoTen";
+            // 
+            // sdt
+            // 
+            this.sdt.DataPropertyName = "sodt";
+            this.sdt.HeaderText = "sodt";
+            this.sdt.Name = "sdt";
+            // 
+            // taikhoan
+            // 
+            this.taikhoan.DataPropertyName = "taikhoan";
+            this.taikhoan.HeaderText = "taikhoan";
+            this.taikhoan.Name = "taikhoan";
+            // 
+            // matkhau
+            // 
+            this.matkhau.DataPropertyName = "matkhau";
+            this.matkhau.HeaderText = "matkhau";
+            this.matkhau.Name = "matkhau";
+            // 
+            // dMNVBindingSource
+            // 
+            this.dMNVBindingSource.DataMember = "DMNV";
+            this.dMNVBindingSource.DataSource = this.dMNV;
+            // 
+            // dMNV
+            // 
+            this.dMNV.DataSetName = "DMNV";
+            this.dMNV.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
@@ -185,50 +227,9 @@
             this.txtTen.Size = new System.Drawing.Size(239, 20);
             this.txtTen.TabIndex = 58;
             // 
-            // dMNVBindingSource
-            // 
-            this.dMNVBindingSource.DataMember = "DMNV";
-            this.dMNVBindingSource.DataSource = this.dMNV;
-            // 
-            // dMNV
-            // 
-            this.dMNV.DataSetName = "DMNV";
-            this.dMNV.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dMNVTableAdapter
             // 
             this.dMNVTableAdapter.ClearBeforeFill = true;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // hoTen
-            // 
-            this.hoTen.DataPropertyName = "hoten";
-            this.hoTen.HeaderText = "hoten";
-            this.hoTen.Name = "hoTen";
-            // 
-            // sdt
-            // 
-            this.sdt.DataPropertyName = "sodt";
-            this.sdt.HeaderText = "sodt";
-            this.sdt.Name = "sdt";
-            // 
-            // taikhoan
-            // 
-            this.taikhoan.DataPropertyName = "taikhoan";
-            this.taikhoan.HeaderText = "taikhoan";
-            this.taikhoan.Name = "taikhoan";
-            // 
-            // matkhau
-            // 
-            this.matkhau.DataPropertyName = "matkhau";
-            this.matkhau.HeaderText = "matkhau";
-            this.matkhau.Name = "matkhau";
             // 
             // frNhanVien
             // 
@@ -249,7 +250,9 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dataGridViewVN);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frNhanVien";
             this.Load += new System.EventHandler(this.frNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVN)).EndInit();
