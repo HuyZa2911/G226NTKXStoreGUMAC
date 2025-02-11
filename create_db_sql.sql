@@ -83,9 +83,11 @@ CREATE TABLE DMCSBH (
 -- Tạo bảng Phiếu xuất kho
 CREATE TABLE PhieuXK (
    ID INT IDENTITY(1,1) PRIMARY KEY,
-    ngaylap DATE,
+     ngaylap DATE,
     mscsbh int,
     msnv int,
+    mskho int,
+	msncc int,
     ghichu NVARCHAR(MAX),
     CONSTRAINT FK_DMCSBH_mscsbh FOREIGN KEY (mscsbh) REFERENCES DMCSBH(ID),
     CONSTRAINT FK_DMNV_msnv  FOREIGN KEY (msnv) REFERENCES DMNV(ID)
